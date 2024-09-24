@@ -43,18 +43,19 @@ kaye-the-family-organizer/
 To set up Kaye The Family Organizer locally, follow these steps:
 
 1. **Clone the repository**:
-   ```bash
+```bash
    git clone https://github.com/yourusername/kaye-the-family-organizer.git
    cd kaye-the-family-organizer
+```
 (Optional)Set up a virtual environment:
- ```
+```
 python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
- ```
+```
 2. **Install the required packages**:
- ```
+```
 pip install -r requirements.txt
- ```
+```
 3. **Update wearther API key in kaye.py, You can get a API key from https://openweathermap.org/**:
 ```
 def get_weather(city):
@@ -78,6 +79,8 @@ python3 kaye.py
 ## Contributing
 - Contributions are welcome! If you would like to contribute to Kaye The Family Organizer, please fork the repository and submit a pull request. Ensure to follow the contribution guidelines.
 
+## License
+- This project is licensed under the GNU General Public License v3.0. See the LICENSE file for more details.
 
 ## Thank you for checking out Kaye The Family Organizer! 
 - We hope it helps make your family's life easier and more organized.
