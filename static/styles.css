@@ -1,1 +1,182 @@
 
+/* General Styles */
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0a0a0a;
+  color: #e2e8f0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+/* Gradient Background */
+.gradient-bg {
+  background: linear-gradient(135deg, #1f2937 0%, #6b7280 100%);
+  padding: 20px;
+  border-radius: 8px;
+  animation: gradientMove 15s ease infinite;
+}
+
+
+
+/* Neon Text with Animation */
+.neon-text {
+  position: relative;
+  display: inline-block; /* Ensure the neon effect only applies to the text */
+  color: transparent; /* Hide the default color */
+  background-image: linear-gradient(90deg, #ffffff, #00aaff); /* Gradient from white to blue */
+  background-clip: text; /* Clip the background to the text */
+  -webkit-background-clip: text; /* For Safari */
+  animation: colorChange 4s linear infinite; /* Animation for color change, set to loop */
+  text-shadow: 
+    0 0 5px #ffffff,
+    0 0 10px #ffffff,
+    0 0 20px #00aaff,
+    0 0 30px #00aaff;
+}
+
+/* Keyframes for Color Change Animation */
+@keyframes colorChange { 
+  0% {
+    background-position: 0% 50%; /* Start with white */
+  }
+  50% {
+    background-position: 100% 50%; /* Transition to blue */
+  }
+  100% {
+    background-position: 0% 50%; /* Return to white */
+  }
+}
+
+/* Flickering Light Effect on Hover */
+.neon-text:hover {
+  animation: flicker 2s infinite; /* Start flicker animation on hover */
+}
+
+/* Keyframes for Flicker Animation */
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  30% {
+    opacity: 0.9;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 0.4;
+  }
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+/* Weather Alerts */
+.weather_alert_active {
+  color: red !important;
+  font-weight: bold;
+  animation: blink 1s step-start infinite;
+}
+
+.weather_alert_deactive {
+  color: green !important;
+  font-weight: bold;
+}
+
+/* Keyframes for Animations */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #4a5568, 0 0 10px #4a5568;
+  }
+  to {
+    text-shadow: 0 0 20px #4a5568, 0 0 40px #4a5568, 0 0 60px #4a5568;
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1200px) {
+  body {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  body {
+    font-size: 1rem;
+  }
+  .gradient-bg {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9rem;
+  }
+  .gradient-bg {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 0.8rem;
+  }
+  .gradient-bg {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 0.7rem;
+  }
+  .gradient-bg {
+    padding: 5px;
+  }
+}
