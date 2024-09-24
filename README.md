@@ -18,6 +18,26 @@
 - **Fonts**: Google Fonts - Orbitron
 - **Weather API**: Integrated to fetch live weather data
 
+## File structure for "Kaye The Family Organizer"
+```
+kaye-the-family-organizer/
+│
+├── templates/                  # HTML templates for the application
+│   ├── home.html               # Home page template
+│   ├── tasks.html              # Tasks management template
+│   ├── meal_planner.html       # Meal planner template
+│   └── grocery.html            # Grocery list template
+│
+├── static/                     # Static files (CSS, JavaScript, images)
+│   ├── styles.css              # Custom styles for the application
+│   └── (other static assets)   # Any additional static assets (images, JS files)
+│
+├── kaye.py                     # Main application file (Flask backend)
+├── requirements.txt            # Python package dependencies
+├── README.md                   # Project documentation
+└── LICENSE                     # License file (e.g., MIT License)
+```
+
 ## Installation
 
 To set up Kaye The Family Organizer locally, follow these steps:
