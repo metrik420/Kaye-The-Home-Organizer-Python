@@ -1,5 +1,16 @@
 Python 3.10.12
-Flask==2.2.3
+Flask==2.3.2
+Flask-SQLAlchemy==3.0.3
+Flask-Migrate==4.0.4
 Flask-WTF==1.0.1
-Flask-SQLAlchemy==2.5.1
-requests==2.28.1
+Flask-Caching==2.0.1
+Flask-Login==0.6.2  # For user authentication if needed
+Flask-Security==5.0.0  # For authentication/authorization (optional)
+WTForms==3.0.1
+gunicorn==21.2.0  # For running the app in production
+Jinja2==3.1.2  # Template engine used by Flask
+python-dotenv==1.0.0  # For environment variables (if needed)
+requests==2.31.0  # For making external API calls (e.g., weather API)
+SQLAlchemy==2.0.17  # SQLAlchemy for database models
+pytest==7.4.0  # For unit testing
+psycopg2-binary==2.9.6  # Only if you use PostgreSQL (remove if using SQLite)
