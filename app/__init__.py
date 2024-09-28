@@ -4,6 +4,8 @@ from app.blueprints.tasks import tasks_bp
 from app.blueprints.calendar import calendar_bp
 from app.blueprints.grocery import grocery_bp
 from app.blueprints.profile import profile_bp
+from flask_migrate import Migrate
+from app.extensions import db
 
 def create_app():
     app = Flask(__name__)
@@ -19,4 +21,5 @@ def create_app():
     app.register_blueprint(grocery_bp)
     app.register_blueprint(profile_bp)
 
+    migrate = Migrate(app, db)  # Initialize Flask-Migrate
     return app
